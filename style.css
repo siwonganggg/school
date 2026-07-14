@@ -90,7 +90,7 @@ button{
 
 button:hover{
   /* [포인트 3] 마우스를 올렸을 때도 같은 블루 계열에서 차분하게 짙어짐 */
-    background: #3730a3;
+    background: #2563eb;
 }
 
 button:active{
