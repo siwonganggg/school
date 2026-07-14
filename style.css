@@ -1,193 +1,632 @@
-  /* ===== 기본 설정 ===== */
+/* ===========================
+   기본 설정
+=========================== */
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Pretendard","맑은 고딕",sans-serif;
 }
 
 body{
-    font-family: "맑은 고딕", sans-serif;
-   /* [포인트 1] 은은하고 세련된 파스텔톤 그라디언트 배경 */
-    background: linear-gradient(135deg,#e0eafc,#cfdef3);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+
+    background:#f4f7fb;
+
+    color:#000000;
+
 }
 
-/* ===== 메인 박스 ===== */
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+    width:100%;
+
+    background:#4572fb;
+
+    color:white;
+
+    padding:35px 0;
+
+    margin-bottom:40px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+    width:1100px;
+
+    margin:auto;
+
+}
+
+.logo h1{
+
+    font-size:38px;
+
+    margin-bottom:8px;
+
+}
+
+.logo p{
+
+    opacity:.9;
+
+}
+
+/* ===========================
+   Container
+=========================== */
 
 .container{
-    width: 900px;
-    background: white;
-    border-radius: 15px;
-    padding: 35px;
-   /* [포인트 2] 훨씬 부드럽고 자연스럽게 퍼지는 은은한 그림자 */
-    box-shadow: 0 10px 30px rgba(160, 170, 185, 0.3);
+
+    width:1100px;
+
+    margin:auto;
+
 }
 
-h1{
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 10px;
+/* ===========================
+   Card
+=========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
 }
 
-.description{
-    text-align: center;
-    color: gray;
-    margin-bottom: 30px;
-    font-size: 15px;
+.card h2{
+
+    margin-bottom:25px;
+
+    color:#000000;
+
 }
 
-/* ===== 과목 입력 ===== */
+/* ===========================
+   입력창
+=========================== */
 
-.subject{
-    display: flex;
-    align-items: center;
-    margin-bottom: 18px;
+.input-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
 }
 
-.subject label{
-    width: 130px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+.input-box{
+
+    display:flex;
+
+    flex-direction:column;
+
 }
 
-.subject input{
-    flex: 1;
-    padding: 12px;
-    font-size: 17px;
-    border: 2px solid #dcdcdc;
-    border-radius: 8px;
-    transition: .2s;
+.input-box label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
 }
 
-.subject input:focus{
-    outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 8px rgba(52,152,219,.3);
+.input-box input{
+
+    height:50px;
+
+    padding:12px;
+
+    border:1px solid #cbd5e1;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    transition:.2s;
+
 }
 
-/* ===== 버튼 ===== */
+.input-box input:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 8px rgba(37,99,235,.25);
+
+}
+
+/* ===========================
+   Select
+=========================== */
+
+.select-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+.select-grid label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.select-grid select{
+
+    width:100%;
+
+    height:50px;
+
+    border-radius:10px;
+
+    border:1px solid #cbd5e1;
+
+    padding:0 12px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+.select-grid select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+}
+
+/* ===========================
+   버튼
+=========================== */
+
+.button-section{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
 
 button{
-    width: 100%;
-    padding: 15px;
-    margin-top: 20px;
-  /* [포인트 3] 튀지 않고 배경과 잘 어우러지는 세련된 인디고 블루 테마 */
-    background: #e74c3c;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .3s;
+
+    flex:1;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
 }
 
-button:hover{
-  /* [포인트 3] 마우스를 올렸을 때도 같은 블루 계열에서 차분하게 짙어짐 */
-    background: #2563eb;
+.calculate-btn{
+
+    background:#2563eb;
+
+    color:white;
+
 }
 
-button:active{
-    transform: scale(.98);
+.calculate-btn:hover{
+
+    background:#1e40af;
+
 }
 
-/* ===== 결과창 ===== */
+.reset-btn{
 
-#result{
-    margin-top: 35px;
+    background:#64748b;
+
+    color:white;
+
 }
 
-/* ===== 표 ===== */
+.reset-btn:hover{
+
+    background:#475569;
+
+}/* ===========================
+   결과 카드
+=========================== */
+
+.result-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.result-card h2{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   요약 카드
+=========================== */
+
+.summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+.summary-box{
+
+    background:#f8fafc;
+
+    border:1px solid #dbeafe;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.summary-box h3{
+
+    font-size:15px;
+
+    color:#64748b;
+
+    margin-bottom:12px;
+
+}
+
+.summary-box p{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#1d4ed8;
+
+}
+
+/* ===========================
+   테이블
+=========================== */
 
 table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
+
+    width:100%;
+
+    border-collapse:collapse;
+
 }
 
-table th{
-    background: #f1f5f9;
-    color: #334155;
-    padding: 12px;
-    font-weight: bold;
+thead{
+
+    background:#2563eb;
+
+    color:white;
+
 }
 
-table td{
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+th{
+
+    padding:15px;
+
+    font-weight:600;
+
 }
 
-table tr:nth-child(even){
-    background: #f8f8f8;
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    text-align:center;
+
 }
 
-table tr:hover{
-    background: #eef7ff;
+tbody tr:nth-child(even){
+
+    background:#f8fafc;
+
 }
 
-/* ===== 평균 ===== */
+tbody tr:hover{
 
-.average{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
+    background:#eff6ff;
+
 }
 
-/* ===== 등급 색상 ===== */
+/* ===========================
+   추천 대학
+=========================== */
+
+.recommend-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+.recommend-card{
+
+    background:#f8fafc;
+
+    border:1px solid #dbeafe;
+
+    border-radius:12px;
+
+    padding:20px;
+
+}
+
+.recommend-card h3{
+
+    color:#1d4ed8;
+
+    margin-bottom:15px;
+
+}
+
+.recommend-card ul{
+
+    list-style:none;
+
+}
+
+.recommend-card li{
+
+    padding:12px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.recommend-card li:last-child{
+
+    border:none;
+
+}
+
+/* ===========================
+   그래프
+=========================== */
+
+canvas{
+
+    width:100% !important;
+
+    max-height:400px;
+
+}
+
+/* ===========================
+   안내문
+=========================== */
+
+.notice{
+
+    background:#fffbeb;
+
+    border-left:5px solid #f59e0b;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    line-height:1.8;
+
+}
+
+.notice h3{
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+    margin-top:50px;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#64748b;
+
+}
+
+/* ===========================
+   등급 색상
+=========================== */
 
 .grade1{
-    color: #e74c3c;
-    font-weight: bold;
+
+    color:#dc2626;
+    font-weight:bold;
+
 }
 
 .grade2{
-    color: #4053e6;
-    font-weight: bold;
+
+    color:#ea580c;
+    font-weight:bold;
+
 }
 
 .grade3{
-    color: #b8d943;
-    font-weight: bold;
+
+    color:#ca8a04;
+    font-weight:bold;
+
 }
 
 .grade4{
-    color: #ed49b1;
-    font-weight: bold;
+
+    color:#0284c7;
+    font-weight:bold;
+
 }
 
 .grade5{
-    color: gray;
-    font-weight: bold;
+
+    color:#475569;
+    font-weight:bold;
+
 }
 
-/* ===== 반응형 ===== */
+/* ===========================
+   반응형
+=========================== */
+
+@media(max-width:1000px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+    .logo{
+
+        width:95%;
+
+    }
+
+    .summary{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .recommend-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
 
 @media(max-width:700px){
 
-    .container{
-        width:100%;
-        padding:20px;
+    .input-grid{
+
+        grid-template-columns:1fr;
+
     }
 
-    .subject{
+    .select-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .summary{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .button-section{
+
         flex-direction:column;
-        align-items:flex-start;
+
     }
 
-    .subject label{
-        margin-bottom:8px;
+    table{
+
+        font-size:14px;
+
     }
 
-    .subject input{
-        width:100%;
+}
+
+/* ===========================
+   애니메이션
+=========================== */
+
+.card,
+.result-card{
+
+    animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
     }
 
 }
