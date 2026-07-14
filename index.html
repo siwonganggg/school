@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고등학교 5등급제 성적 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1> 고등학교 5등급제 성적 계산기</h1>
+
+    <p class="description">
+        각 과목의 점수를 입력한 후 <strong>계산하기</strong> 버튼을 눌러주세요.
+    </p>
+
+    <div class="subject">
+        <label for="korean">국어</label>
+        <input type="number" id="korean" placeholder="0 ~ 100점" min="0" max="100">
+    </div>
+
+    <div class="subject">
+        <label for="math">수학</label>
+        <input type="number" id="math" placeholder="0 ~ 100점" min="0" max="100">
+    </div>
+
+    <div class="subject">
+        <label for="english">영어</label>
+        <input type="number" id="english" placeholder="0 ~ 100점" min="0" max="100">
+    </div>
+
+    <div class="subject">
+        <label for="science">통합과학</label>
+        <input type="number" id="science" placeholder="0 ~ 100점" min="0" max="100">
+    </div>
+
+    <div class="subject">
+        <label for="society">통합사회</label>
+        <input type="number" id="society" placeholder="0 ~ 100점" min="0" max="100">
+    </div>
+
+    <div class="subject">
+        <label for="history">한국사</label>
+        <input type="number" id="history" placeholder="0 ~ 100점" min="0" max="100">
+    </div>
+
+    <div class="subject">
+        <label for="chinese">한문</label>
+        <input type="number" id="chinese" placeholder="0 ~ 100점" min="0" max="100">
+    </div>
+
+    <button onclick="calculate()">
+        성적 계산하기
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
